@@ -38,7 +38,7 @@ function App() {
     <div className={styles.main}>
       <header>
         <div className={styles.headerContainer}>
-          <img src={powered} width={150} alt="" />
+          <img src={powered} width={150} alt="Logo" />
         </div>
       </header>
       <div className={styles.container}>
