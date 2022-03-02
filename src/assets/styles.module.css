@@ -1,0 +1,133 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.main{
+    padding: 0 20px;
+}
+.headerContainer{
+    max-width: 950px;
+    margin: 40px auto;
+}
+.container{
+    display: flex;
+    max-width: 950px;
+    margin: auto;
+}
+.container .leftSide{
+    flex: 1;
+    margin-right: 40px;
+}
+.container .leftSide h1{
+    font-size: 40px;
+    color: #3a4b5c;
+}
+.container .leftSide p{
+    font-size: 16px;
+    margin-bottom: 40px;
+    color:#6a7d8b;
+}
+.container .leftSide .show{
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: auto;
+    background-color: rgb(255, 209, 209);
+    color: red;
+    padding: 5px 10px;
+}
+.container .leftSide input{
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid rgba(150,163, 171,.5);
+    outline: none;
+    padding: 10px 2px;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+.container .leftSide input:disabled{
+    opacity: .5;
+}
+.container .leftSide button{
+    background-color: #227c9d;
+    color: #FFF;
+    font-size: 15px;
+    padding: 15px 0;
+    width: 100%;
+    border: 0;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 40px;
+    transition:all ease .2s;
+}
+.container .leftSide button:hover{
+    opacity: .9;
+}
+.container .leftSide button:disabled{
+    opacity: .5;
+    cursor: default;
+}
+.container .rightSide{
+    flex: 1;
+    margin-left: 40px;
+    display: flex;
+}
+.container .rightSide .grid{
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+.container .rightSide .rightBig{
+    flex: 1;
+    display: flex;
+}
+.container .rightSide .rightArrow{
+    position: absolute;
+    background-color: #227c9d;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 145px;
+    margin-left: -35px;
+    transition: all ease .2s;
+}
+.container .rightSide .rightArrow:hover{
+    background-color: #20718f;
+}
+
+
+@media (max-width:990px) {
+    .container{
+        flex-direction: column;
+    }
+    .container .leftSide{
+        margin: 0;
+    }
+    
+    .container .rightSide{
+        margin: 30px 0 30px 0;
+    }
+    .container .rightSide .rightArrow{
+        margin-top: 0;
+        margin-left: 0;
+        border-radius: 10px;
+    }
+}
+
+@media (max-width:450px) {
+    .container .leftSide h1{
+        font-size: 30px;
+    }
+    .container .rightSide .grid{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
